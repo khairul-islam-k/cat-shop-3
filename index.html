@@ -14,6 +14,19 @@
     <!-- DaisyUI Style -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tail wind custom -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              navbar: ' rgb(255, 249, 244)',
+            }
+          }
+        }
+      }
+    </script>
 
     <style>
       .adlam-display {
@@ -22,40 +35,112 @@
 .sora {
   font-family: "Sora", serif;
 }
+
+/* navbar */
+.background {
+  background: rgb(255, 249, 244);
+}
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+  }
+  .logo {
+    display:flex;
+    align-items: center;
+    gap:8px;
+    font-size: 26px;
+  }
+  .pet-4 {
+    color:rgb(255, 220, 38);
+  }
+.topnav a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  .btnk-1 {
+    padding: 10px 30px 10px 30px;
+border: 1px solid rgb(255, 220, 38);
+border-radius: 8px;
+  }
+  .btnk-2 {
+    padding: 10px 30px 10px 30px;
+    background-color: rgb(255, 220, 38);
+border-radius: 8px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .khairul {
+      margin-top: 60px;
+    }
+    .browse {
+      display: none;
+    }
+    .topnav {
+      align-items: start;
+    }
+    .topnav a {display: none;}
+    .topnav a.icon {
+      display: block;
+    }
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      display: block;
+      text-align: center;
+    }
+  }
     </style>
 </head>
 <body class="sora">
     <header>
-        <nav>
-            <div class="topnav" id="myTopnav">
-                <div class="">
-                    <img src="" alt="">
-                </div>
-               <div class="">
-                <a href="">Home</a>
-                <a href="">News</a>
-                <a href="">Contact</a>
-                <a href="">About</a>
-               </div>
-               <div class="">
-                <a href=""><button>login</button></a>
-                <a href=""><button>registate</button></a>
-               </div>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                  <i class="fa fa-bars"></i>
-                </a>
-              </div>
-              <script>
-                function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-              </script>
-        </nav>
+      <nav class="background">
+        <div class="topnav md:container md:mx-auto" id="myTopnav">
+          <div class="logo">
+              <img src="c1-assets/logo-header.png" alt="">
+              <p class="browse">Browse<span class="pet-4">4</span>Pets</p>
+          </div>
+         <div class="center">
+          <a href="">Find a pet</a>
+          <a href="">Breeds</a>
+          <a href="">Contact Us</a>
+         </div>
+         <div class="khairul">
+          <a href=""><i class="fa-regular fa-bell"></i></a>
+          <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href=""><button class="btnk-1">Login</button></a>
+          <a href=""><button class="btnk-2">Register</button></a>
+         </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <script>
+          function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+        </script>
+      </nav>
     </header>
 </body>
 </html>
