@@ -24,6 +24,10 @@
               cat: 'rgb(255, 220, 38)',
               product: 'rgb(255, 249, 244)',
               'product-border': 'rgba(17, 17, 17, 0.1);',
+              'grad-1': 'rgb(248, 204, 251)',
+              'grad-2': 'rgb(172, 210, 253)',
+              'grad-3': 'rgb(255, 249, 244)',
+              'grad-4': 'rgb(249, 223, 138)',
               'card-back': 'rgb(249, 223, 138)',
             }
           }
@@ -84,6 +88,10 @@ border-radius: 8px;
   }
 
   @media screen and (max-width: 640px) {
+     /* grooming */
+     .under, .easy {
+      display: none;
+     }
     .khairul {
       margin-top: 60px;
     }
@@ -374,6 +382,28 @@ border-radius: 8px;
              </div>
           </div>
         </section>
+        <!-- low Price -->
+         <section class="md:container md:mx-auto">
+          <h5 class="adlam-display lg:text-4xl text-2xl mt-20 lg:mt-36 lg:mb-11 mb-8">Everyday low Price</h5>
+          <div class="flex gap-6 flex-col lg:flex-row">
+            <div class="relative rounded-xl lg:flex lg:justify-between lg:items-center bg-gradient-to-r from-grad-1 to-grad-2 h-[480px] lg:w-[784px] pl-5 lg:pl-20">
+              <div>
+                <p class="under">Under Price</p>
+                <p class="adlam-display pt-9 lg:mt-3 text-2xl lg:text-3xl">Pet Grooming Mitt</p>
+                <p class="easy mt-2 mb-4">(Easy Hair Removal)</p>
+                <h3 class="lg:text-6xl text-4xl text-white lg:text-gray-700">$7.99</h3>
+              </div>
+              <div class="absolute bottom-0 right-0 lg:relative">
+                <img class="w-3/4 h-3/4 lg-full lg:w-full" src="c1-assets/cute-dog-mid.png" alt="">
+              </div>
+            </div>
+            <div class="relative h-[480px] lg:w-[500px] bg-gradient-to-r from-grad-3 to-grad-4 pl-5 lg:pl-20 rounded-xl">
+              <h4 class="adlam-display pt-9 text-2xl lg:text-3xl">T-Shirt for Dogs</h4>
+              <P class="lg:text-6xl text-4xl text-yellow-400">$7.99</P>               
+                <img class="absolute bottom-0 right-0" src="c1-assets/cute-pet-mid.png" alt="">
+            </div>
+          </div>
+         </section>
     </main>
 </body>
 </html>
